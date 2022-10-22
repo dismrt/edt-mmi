@@ -25,6 +25,17 @@ Démarrer le bot avec la commande :
 npm start
 ```
 
+## Utilisation
+```
+!edt <groupe>
+!edt <groupe> <date>
+```
+exemple :
+```
+!edt SCI
+!edt CNA 24/10/2022
+```
+
 ## TO DO
 - Notification régulière de l'emploi du temps
 - Ajouter les emplois du temps des étudiants en première année
