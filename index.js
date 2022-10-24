@@ -14,7 +14,7 @@ const client = new Client({
 client.on('messageCreate', async (message) => {
 
     if(client.user.id == message.author.id) return;
-    if(!message.content.toLowerCase().startsWith("!edt ")) return;
+    if(!message.content.toLowerCase().startsWith("/edt ")) return;
 
     let args = message.content.split(" ");
 
