@@ -56,11 +56,12 @@ function createEmbed(groupe, date, events){
     
             let summary = event.summary;
             let location = event.location.split(",")[0].substring(6);
-    
+            let enseignant = event.description.split("\n")[event.description.split("\n").length-4];
+
             embed.addFields(
                 {
                     name: ":clock2: "+start+" - "+end+(location != "" ? " :round_pushpin: "+location : ""),
-                    value: summary+""
+                    value: summary+"\n"+enseignant+""
                 }
             );
     
@@ -186,7 +187,7 @@ const command = new SlashCommandBuilder()
 
 client.once('ready', () => {
 
-    client.application.commands.create(command);
+    client.guilds.cache.find(g => g.id === "908708248494932068").commands.create(command);
 
     client.user.setPresence({
         activities: [
